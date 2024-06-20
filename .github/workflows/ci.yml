@@ -18,10 +18,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: cat /proc/cpuinfo
-
-      - name: Run a one-line script
-        run: kvm-ok
+      - run: cat /proc/cpuinfo
+      - run: cat /proc/1/cgroup
+      - run: /usr/bin/systemd-detect-virt
+      - run: /usr/bin/systemd-detect-virt -c
