@@ -9,6 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: cat /proc/cpuinfo
-      - run: cat /proc/1/cgroup
+      - run: dmidecode
       - run: /usr/bin/systemd-detect-virt
-      - run: /usr/bin/systemd-detect-virt -c
